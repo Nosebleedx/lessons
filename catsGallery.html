@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея кошек</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .gallery {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .gallery h1 {
+            color: #2a4b8d;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .gallery .big-image {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .gallery .thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery .thumbnails img {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .gallery .thumbnails img:hover {
+            border-color: #2a4b8d;
+        }
+    </style>
+    <script>
+        function changeImage(event) {
+            const bigImage = document.querySelector('.big-image');
+            bigImage.style.backgroundImage = `url(${event.target.src})`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstThumbnail = document.querySelector('.thumbnails img');
+            const bigImage = document.querySelector('.big-image');
+            bigImage.style.backgroundImage = `url(${firstThumbnail.src})`;
+
+            document.querySelectorAll('.thumbnails img').forEach(img => {
+                img.addEventListener('click', changeImage);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="gallery">
+        <h1>Cats Gallery</h1>
+        <div class="big-image"></div>
+        <div class="thumbnails">
+            <img src="images/cat1.png" alt="Cat 1">
+            <img src="images/cat2.png" alt="Cat 2">
+            <img src="images/cat3.png" alt="Cat 3">
+            <img src="images/cat4.png" alt="Cat 4">
+            <img src="images/cat5.png" alt="Cat 5">
+        </div>
+    </div>
+</body>
+</html>

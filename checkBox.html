@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список задач</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 300px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .todo-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .todo-list li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        background-color: #e0f7fa;
+    }
+
+    .todo-list li:nth-child(even) {
+        background-color: #b2ebf2;
+    }
+
+    .todo-list li.completed {
+        background-color: #cfd8dc;
+        text-decoration: line-through;
+    }
+
+    .todo-list li.completed .task {
+        color: #616161;
+    }
+
+    .todo-list input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    .todo-list .status {
+        font-size: 18px;
+        color: red;
+    }
+
+    .todo-list li.completed .status {
+        color: green;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My To Do List</h1>
+        <ul class="todo-list">
+            <li class="completed">
+                <input type="checkbox" checked disabled>
+                <span class="task">Hit the gym</span>
+                <span class="status">&#x2714;</span>
+            </li>
+            <li>
+                <input type="checkbox" disabled>
+                <span class="task">Pay bills</span>
+                <span class="status">&#x2716;</span>
+            </li>
+            <li>
+                <input type="checkbox" disabled>
+                <span class="task">Meet John</span>
+                <span class="status">&#x2716;</span>
+            </li>
+            <li>
+                <input type="checkbox" disabled>
+                <span class="task">Buy eggs</span>
+                <span class="status">&#x2716;</span>
+            </li>
+            <li class="completed">
+                <input type="checkbox" checked disabled>
+                <span class="task">Read a book</span>
+                <span class="status">&#x2714;</span>
+            </li>
+            <li>
+                <input type="checkbox" disabled>
+                <span class="task">Organize office</span>
+                <span class="status">&#x2716;</span>
+            </li>
+            <li>
+                <input type="checkbox" disabled>
+                <span class="task">Eat dinner</span>
+                <span class="status">&#x2716;</span>
+            </li>
+            <li>
+                <input type="checkbox" disabled>
+                <span class="task">Buy apples</span>
+                <span class="status">&#x2716;</span>
+            </li>
+            <li class="completed">
+                <input type="checkbox" checked disabled>
+                <span class="task">Meet George</span>
+                <span class="status">&#x2714;</span>
+            </li>
+            <li>
+                <input type="checkbox" disabled>
+                <span class="task">Feed the cat</span>
+                <span class="status">&#x2716;</span>
+            </li>
+            <li class="completed">
+                <input type="checkbox" checked disabled>
+                <span class="task">Write a letter</span>
+                <span class="status">&#x2714;</span>
+            </li>
+            <li>
+                <input type="checkbox" disabled>
+                <span class="task">Run 1 km</span>
+                <span class="status">&#x2716;</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

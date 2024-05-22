@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список фруктов</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+    .container {
+        background-color: #ffe4e1;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        background-color: #ffc0cb;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    li.highlight {
+        background-color: #ff8c94;
+    }
+
+    li::before {
+        content: attr(value) ".";
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .item-bg {
+        background-color: #ff6f61;
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 3px;
+        color: #fff;
+    }
+
+    </style>>
+</head>
+<body>
+    <div class="container">
+        <ol>
+            <li><span class="item-bg">Apple</span></li>
+            <li><span class="item-bg">Orange</span></li>
+            <li class="highlight"><span class="item-bg">Pineapple</span></li>
+            <li><span class="item-bg">Pear</span></li>
+            <li><span class="item-bg">Cherry</span></li>
+        </ol>
+    </div>
+</body>
+</html>
