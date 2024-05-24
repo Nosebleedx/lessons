@@ -21,6 +21,7 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 350px;
         }
         .gallery h1 {
             color: #2a4b8d;
@@ -32,53 +33,48 @@
             height: 300px;
             border: 1px solid #ccc;
             margin-bottom: 20px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
         }
         .gallery .thumbnails {
             display: flex;
             justify-content: center;
             gap: 10px;
         }
-        .gallery .thumbnails img {
+        .gallery .thumbnails a img {
             width: 50px;
             height: 50px;
             cursor: pointer;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .gallery .thumbnails img:hover {
+        .gallery .thumbnails a img:hover {
             border-color: #2a4b8d;
         }
     </style>
-    <script>
-        function changeImage(event) {
-            const bigImage = document.querySelector('.big-image');
-            bigImage.style.backgroundImage = `url(${event.target.src})`;
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const firstThumbnail = document.querySelector('.thumbnails img');
-            const bigImage = document.querySelector('.big-image');
-            bigImage.style.backgroundImage = `url(${firstThumbnail.src})`;
-
-            document.querySelectorAll('.thumbnails img').forEach(img => {
-                img.addEventListener('click', changeImage);
-            });
-        });
-    </script>
 </head>
 <body>
     <div class="gallery">
         <h1>Cats Gallery</h1>
-        <div class="big-image"></div>
+        <!-- Большое изображение в iframe
+        
+        </iframe>:
+        <iframe>: Используется для отображения большого изображения.
+        class="big-image": Применение стилей для большого изображения.
+        src="котик.jpg": Указывает начальное изображение, которое будет отображаться при загрузке страницы.
+        name="bigImage": Дает <iframe> имя, чтобы его можно было легко менять через ссылки.
+        frameborder="0": Убирает рамку вокруг <iframe>.
+        Когда страница загружается, <iframe> отображает начальное изображение, указанное в src (в данном случае котик.jpg).
+        Пользователь видит заголовок, большое изображение и миниатюры.
+        При клике на миниатюру <a href="someimage.jpg" target="bigImage">, содержимое <iframe> обновляется, и в нем отображается новое изображение.
+        Это происходит благодаря атрибуту target в ссылках, который указывает на имя <iframe> (bigImage).
+        -->
+        <iframe class="big-image" src="котик.jpg" name="bigImage" frameborder="0"></iframe>
         <div class="thumbnails">
-            <img src="images/cat1.png" alt="Cat 1">
-            <img src="images/cat2.png" alt="Cat 2">
-            <img src="images/cat3.png" alt="Cat 3">
-            <img src="images/cat4.png" alt="Cat 4">
-            <img src="images/cat5.png" alt="Cat 5">
+            <!-- Ссылки на миниатюры, ведущие к изменению большого изображения в iframe -->
+            <a href="котик.jpg" target="bigImage"><img src="котик.jpg" alt="Cat 1"></a>
+            <a href="котик1.webp" target="bigImage"><img src="котик1.webp" alt="Cat 2"></a>
+            <a href="котик2.avif" target="bigImage"><img src="котик2.avif" alt="Cat 3"></a>
+            <a href="котик.jpg" target="bigImage"><img src="котик.jpg" alt="Cat 4"></a>
+            <a href="котик3.avif" target="bigImage"><img src="котик3.avif" alt="Cat 5"></a>
         </div>
     </div>
 </body>
