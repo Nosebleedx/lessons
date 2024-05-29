@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналоговые часы</title>
+    <style>
+        body {
+            display: flex; /* Используем Flexbox для центрирования часов */
+            justify-content: center; /* Горизонтальное центрирование */
+            align-items: center; /* Вертикальное центрирование */
+            height: 100vh; /* Высота 100% от высоты экрана */
+            margin: 0; /* Убираем отступы */
+            background-color: #f0f0f0; /* Цвет фона страницы */
+        }
+        .clock {
+            position: relative; /* Относительное позиционирование для дочерних элементов */
+            width: 300px; /* Ширина часов */
+            height: 300px; /* Высота часов */
+            border: 10px solid #333; /* Обводка часов */
+            border-radius: 50%; /* Скругляем углы, чтобы получился круг */
+            background-color: white; /* Белый фон циферблата */
+            box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Легкая тень для объема */
+        }
+        .clock::after {
+            content: ''; /* Пустой контент для псевдоэлемента */
+            position: absolute; /* Абсолютное позиционирование внутри часов */
+            width: 10px; /* Ширина центральной точки */
+            height: 10px; /* Высота центральной точки */
+            background-color: #333; /* Цвет центральной точки */
+            border-radius: 50%; /* Скругляем углы для круга */
+            top: 50%; /* Центрирование по вертикали */
+            left: 50%; /* Центрирование по горизонтали */
+            transform: translate(-50%, -50%); /* Сдвиг, чтобы центрировать */
+            z-index: 10; /* Поверх всех элементов */
+        }
+        .hand {
+            position: absolute; /* Абсолютное позиционирование внутри часов */
+            width: 50%; /* Длина стрелок (50% от радиуса циферблата) */
+            height: 6px; /* Толщина стрелок */
+            background-color: black; /* Цвет стрелок */
+            top: 50%; /* Позиционирование стрелок в центре по вертикали */
+            transform-origin: 100%; /* Точка вращения в конце стрелок */
+            transform: rotate(90deg); /* Начальная позиция на 12 часах */
+        }
+        .hour {
+            height: 8px; /* Толщина часовой стрелки */
+            width: 35%; /* Длина часовой стрелки */
+            background-color: black; /* Цвет часовой стрелки */
+            animation: rotateHour 43200s infinite linear; /* Анимация часовой стрелки (12 часов) */
+        }
+        .minute {
+            height: 6px; /* Толщина минутной стрелки */
+            width: 45%; /* Длина минутной стрелки */
+            background-color: black; /* Цвет минутной стрелки */
+            animation: rotateMinute 3600s infinite linear; /* Анимация минутной стрелки (1 час) */
+        }
+        .second {
+            height: 2px; /* Толщина секундной стрелки */
+            width: 45%; /* Длина секундной стрелки */
+            background-color: red; /* Цвет секундной стрелки */
+            animation: rotateSecond 60s infinite linear; /* Анимация секундной стрелки (1 минута) */
+        }
+        /* Анимация вращения секундной стрелки */
+        @keyframes rotateSecond {
+            from { transform: rotate(90deg); } /* Начало (12 часов) */
+            to { transform: rotate(450deg); } /* Конец (12 часов + полный круг) */
+        }
+        /* Анимация вращения минутной стрелки */
+        @keyframes rotateMinute {
+            from { transform:rotate(90deg); } /* Начало (12 часов) */
+            to { transform: rotate(450deg); } /* Конец (12 часов + полный круг) */
+        }
+        /* Анимация вращения часовой стрелки */
+        @keyframes rotateHour {
+            from { transform: rotate(90deg); } /* Начало (12 часов) */
+            to { transform: rotate(450deg); } /* Конец (12 часов + полный круг) */
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="hand hour"></div> <!-- Часовая стрелка -->
+        <div class="hand minute"></div> <!-- Минутная стрелка -->
+        <div class="hand second"></div> <!-- Секундная стрелка -->
+    </div>
+</body>
+</html>
