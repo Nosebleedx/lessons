@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of fruits</title>
+    <style>
+        .main_decor{
+            background-color: #eb9dad;
+            margin: 25px;
+            color: #ffffff;
+            font-size: 25px;
+        }
+        .strings{
+            margin-right: 30px;
+            padding-top: 30px;
+            padding-bottom: 25px;
+        }
+        li.string{
+            background-color: #c46275;
+            margin-bottom: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+        }
+        .berry{
+            background-color: #9d3549;
+            padding: 10px 25px;
+        }
+        ol {
+            list-style: none;
+        }
+
+        ol li {
+            counter-increment: my-counter;
+        }
+
+        ol li::before {
+            content: counter(my-counter) ". ";
+            padding-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main_decor">
+        <ol class="strings">
+            <li class="string">
+                <span class="berry">Apple</span></li>
+            <li class="string">
+                <span class="berry">Orange</span></li>
+            <li class="string">
+                <span class="berry">Pineapple</span></li>
+            <li class="string">
+                <span class="berry">Pear</span></li>
+            <li class="string">
+                <span class="berry">Cherry</span></li>
+        </ol>
+    </div>
+</body>
+</html>

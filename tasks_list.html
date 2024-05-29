@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tasks list</title>
+    <style>
+        ol {
+            list-style: none;
+            margin-right: 20px;
+        }
+        li {
+            font-size: 20px;
+            padding: 10px;
+        }
+        ol li::after {
+            content: "\2718";
+            color: red;
+            padding-left: 15px;
+        }
+        .even_number {background-color: #a4cad8}
+        .even_number::before{
+            content: url("unchecked_16.png");
+            padding-left: 25px;
+            padding-right: 10px}
+
+        .odd_number {background-color: #acd6e4}
+        .odd_number::before {content: url("unchecked_16.png");
+            padding-left: 25px;
+            padding-right: 10px}
+
+        .selected {background-color: #e0e0e0}
+        .selected::before {content: url("checked_16.png");
+            padding-left: 25px;
+            padding-right: 10px}
+        li span {text-decoration-line: line-through}
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="padding-left: 40px">My To Do List</h1>
+        <ol>
+            <li class="even_number">Hit the gym</li>
+            <li class="selected"><span>Pay bills</span></li>
+            <li class="even_number">Meet John</li>
+            <li class="odd_number">Buy eggs</li>
+            <li class="selected"><span>Read a book</span></li>
+            <li class="odd_number">Organize office</li>
+            <li class="even_number">Eat dinner</li>
+            <li class="odd_number">Buy apples</li>
+            <li class="even_number">Meet George</li>
+            <li class="odd_number">Feed the cat</li>
+            <li class="selected"><span>Write a letter</span></li>
+            <li class="odd_number">Run 1 km</li>
+        </ol>
+    </div>
+</body>
+</html>
