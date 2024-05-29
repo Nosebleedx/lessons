@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Example</title>
+    <style>
+        /* Определение ключевых кадров анимации */
+        @keyframes example {
+            /* Начальное состояние (0%): красный фон, элемент слева */
+            0% {background-color: red; left: 0;}
+            /* Промежуточное состояние (50%): желтый фон, элемент в середине */
+            50% {background-color: yellow; left: 50%;}
+            /* Конечное состояние (100%): красный фон, элемент справа */
+            100% {background-color: purple; left: 100%;}
+        }
+
+        .animated-element {
+            position: absolute; /* Позиционирование элемента относительно его содержащего блока */
+            width: 100px; /* Ширина элемента */
+            height: 100px; /* Высота элемента */
+            background-color: red; /* Начальный цвет фона */
+            /* Сокращенное свойство для анимации */
+            animation: example 4s ease-in-out 2s infinite alternate;
+            /* Это эквивалентно:
+               animation-name: example;             Имя ключевых кадров анимации
+               animation-duration: 4s;              Продолжительность анимации (4 секунды)
+               animation-timing-function: ease-in-out; Функция временного интервала (ускорение в начале и в конце)
+               animation-delay: 2s;                 Задержка перед началом анимации (2 секунды)
+               animation-iteration-count: infinite; Количество повторений (бесконечное)
+               animation-direction: alternate;      Направление воспроизведения (чередование нормального и обратного направления)
+            */
+        }
+    </style>
+</head>
+<body>
+    <!-- Элемент, который будет анимироваться -->
+    <div class="animated-element"></div>
+</body>
+</html>
