@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Общий стиль для всех полосок */
+  .bar-container {
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 30px;
+    position: relative;
+  }
+
+  .bar {
+    height: 100%;
+    width: 0;
+    background-color: orange;
+    transition: width 5s;
+  }
+
+  /* Применение различных timing functions */
+  .bar1 {
+    transition-timing-function: linear;
+  }
+  
+  .bar2 {
+    transition-timing-function: ease-in;
+  }
+  
+  .bar3 {
+    transition-timing-function: ease-out;
+  }
+  
+  .bar4 {
+    transition-timing-function: ease-in-out;
+  }
+
+  /* Анимация заполнения полоски при наведении курсора */
+  .bar-container:hover .bar {
+    width: 100%;
+  }
+  
+</style>
+</head>
+<body>
+  <div class="bar-container">
+    <div class="bar bar1"> LINEAR </div>
+  </div>
+  
+  <div class="bar-container">
+    <div class="bar bar2"> EASE IN </div>
+  </div>
+  
+  <div class="bar-container">
+    <div class="bar bar3"> EASE OUT
+    </div>
+  </div>
+  
+  <div class="bar-container">
+    <div class="bar bar4"> EASE-IN-OUT</div>
+  </div>
+</body>
+</html>

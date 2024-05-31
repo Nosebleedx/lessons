@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Выбираем элемент на который будет применятся переход */
+  div {
+    /* начальное значение высоты */
+    height: 100px;
+    /* начальное значение ширины */
+    width: 100px;
+    /* начальное значение цвета */
+    background-color: red;
+    /* Устанавливаем переход для меняющегося цвета в течение 2 секунд с функцией ускорения "ease-in" */
+    transition-property: background-color, transform; /* перечень свойств */ 
+    transition-duration: 1.5s, 500ms; /* время действия */
+    transition-delay: 1s, 500ms; /* задержка перед началом */
+    transition-timing-function: ease-in; /* временная функция */
+  }
+  /* Эффект срабатывает при наведении курсора на элемент */
+  div:hover {
+    /* Меняем цвет элемента на синий, когда наводим курcор */
+    background-color: blue;
+    transform: scale(1.5);
+    
+  }
+</style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

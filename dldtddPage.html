@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Пример списка описаний</title>
     <style>
-        dl {
-            border: 1px solid #ccc;
-            padding: 10px;
-            width: 300px;
-        }
-        dt {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        dd {
-            margin-left: 20px;
-            margin-bottom: 10px;
-        }
+      dl {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px; /* Задаем ширину родительского элемента */
+}
+
+/* Стили для термина (dt) */
+dt {
+    background-color: blueviolet; /* Цвет фона для термина */
+    font-weight: bold;
+    margin-top: 10px;
+    color: #fff; /* Цвет текста для термина */
+    padding: 10px; /* Добавляем отступы вокруг текста термина */
+    width: 280px; /* Ширина элемента <dt> */
+}
+
+/* Стили для описания (dd) */
+dd {
+    background-color: chocolate; /* Цвет фона для описания */
+    margin-left: 0; /* Убираем отступ слева */
+    margin-bottom: 10px; /* Отступ снизу */
+    color: #fff; /* Цвет текста для описания */
+    padding: 10px; /* Добавляем отступы вокруг текста описания */
+    width: 280px; /* Ширина элемента <dd> */
+}
+
+
     </style>
 </head>
 <!--тег dl(description list) - список описаний терминов
@@ -37,6 +51,9 @@
         <dd>Скриптовый язык общего назначения, особенно подходящий для веб-разработки.</dd>
         <dt>SQL</dt>
         <dd>Язык структурированных запросов, используемый для управления и обработки данных в базах данных.</dd>
+        <hr>
+        <p style="font-size: small;">asdasdasdasdasdasd</p>
+
     </dl>
 </body>
 </html>

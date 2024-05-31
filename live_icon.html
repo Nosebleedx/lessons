@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Icon</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center; /* Центровка контейнера по горизонтали */
+    align-items: center;    /* Центровка контейнера по вертикали */
+    height: 100vh;          /* Высота страницы */
+    margin: 0;
+    background-color: #f0f0f0; /* Цвет фона */
+}
+
+.icon-container {
+    width: 100px;           /* Ширина контейнера */
+    height: 100px;          /* Высота контейнера */
+}
+
+.heart-icon {
+    width: 100%;            /* Ширина иконки */
+    height: 100%;           /* Высота иконки */
+    filter: grayscale(100%); /* Чёрно-белая иконка */
+    transition-property: transform, filter; /* Свойства для анимации */
+    transition-duration: 5s; /* Длительность анимации */
+}
+
+.icon-container:hover .heart-icon {
+    transform: scale(1.5);  /* Увеличение размера */
+    filter: grayscale(0%);  /* Цветная иконка */
+    transition-duration: 0.2s; /* Быстрое возвращение к исходному состоянию */
+}
+
+        </style>
+</head>
+<body>
+    <div class="icon-container">
+        <img src="котик.jpg" alt="Heart Icon" class="heart-icon">
+    </div>
+</body>
+</html>

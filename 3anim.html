@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Icons</title>
+<style>
+  /* Стили для базового внешнего вида страницы */
+  body {
+    font-family: Arial, sans-serif; /* Используемый шрифт */
+    margin: 0; /* Убираем отступы у краев страницы */
+    padding: 0; /* Убираем внутренние отступы */
+  }
+  .container {
+    display: flex; /* Отображаем дочерние элементы в строку */
+    justify-content: center; /* Выравниваем по центру по горизонтали */
+    align-items: center; /* Выравниваем по центру по вертикали */
+    height: 100vh; /* Задаем высоту блока 100% высоты видимой области окна браузера */
+  }
+  .icon {
+    width: 50px; /* Задаем ширину иконки */
+    height: 50px; /* Задаем высоту иконки */
+    background-color: #ccc; /* Задаем цвет фона для иконки */
+    border-radius: 50%; /* Задаем радиус скругления для создания круглой формы */
+    display: flex; /* Отображаем содержимое по центру иконки */
+    justify-content: center; /* Выравниваем содержимое по центру по горизонтали */
+    align-items: center; /* Выравниваем содержимое по центру по вертикали */
+    margin: 10px; /* Задаем внешние отступы для иконок */
+    opacity: 0; /* Устанавливаем начальную непрозрачность для анимации */
+    animation: iconAnimation 2s ease forwards; /* Запускаем анимацию с помощью ключевых кадров */
+  }
+  .icon img {
+    max-width: 100%; /* Задаем максимальную ширину для изображения внутри иконки */
+    max-height: 100%; /* Задаем максимальную высоту для изображения внутри иконки */
+  }
+
+  /* Анимация */
+  @keyframes iconAnimation {
+    0% {
+      transform: translateY(100%); /* Начальное положение: сдвигаем иконку вниз на 100% высоты собственного контейнера */
+      opacity: 0; /* Начальная непрозрачность */
+    }
+    100% {
+      transform: translateY(0); /* Конечное положение: сдвигаем иконку вверх на 0 пикселей */
+      opacity: 1; /* Конечная непрозрачность */
+    }
+  }
+  /* Задержка для последующих иконок */
+  .icon:nth-child(2) {
+    animation-delay: 0.5s; /* Устанавливаем задержку в 0.5 секунды для второй иконки */
+  }
+
+  .icon:nth-child(3) {
+    animation-delay: 1s; /* Устанавливаем задержку в 1 секунду для третьей иконки */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Блок иконки 1 -->
+  <div class="icon">
+    <img src="icon1.png" alt="Icon 1"> <!-- Иконка 1 -->
+  </div>
+  <!-- Блок иконки 2 -->
+  <div class="icon">
+    <img src="icon2.png" alt="Icon 2"> <!-- Иконка 2 -->
+  </div>
+  <!-- Блок иконки 3 -->
+  <div class="icon">
+    <img src="icon3.png" alt="Icon 3"> <!-- Иконка 3 -->
+  </div>
+</div>
+</body>
+</html>
