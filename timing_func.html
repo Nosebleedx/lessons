@@ -34,7 +34,10 @@
   .bar4 {
     transition-timing-function: ease-in-out;
   }
-
+  /*
+    Так же есть у временной фукнции настраиваемое значение cubic-bezier, принимающее несколько значений
+    на сайте https://cubic-bezier.com/#.17,.67,.83,.67 можно посмотреть потыкать как это работает
+  */
   /* Анимация заполнения полоски при наведении курсора */
   .bar-container:hover .bar {
     width: 100%;
@@ -43,6 +46,7 @@
 </style>
 </head>
 <body>
+   
   <div class="bar-container">
     <div class="bar bar1"> LINEAR </div>
   </div>

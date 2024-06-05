@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Card</title>
+  <style>
+
+    /* Основной блок карточки товара */
+    .card {
+      width: 300px; /* Ширина карточки */
+      height: 450px; /* Высота карточки */
+      margin: 0 auto; /* Центрирование карточки по горизонтали */
+      position: relative; /* Относительное позиционирование, чтобы дочерние элементы .product, .description располагались внутри .card */
+      border: 1px solid #f5dde1; /* Граница карточки */
+    }
+
+    /* Стили для блоков .product и .description */
+    .product, .description {
+      width: 100%; /* Ширина равна 100% родителя (.card) */
+      height: 100%; /* Высота равна 100% родителя (.card) */
+      position: absolute; /* Абсолютное позиционирование элементов внутри .card */
+      left: 0; /* Координата позиционирования слева 0px */
+      top: 0; /* Координата позиционирования сверху 0px */
+      text-align:center; /* Выравнивание текста по центру */
+      backface-visibility: hidden; /* Скрытие обратной стороны во время переворота */
+      background-color: #fff; /* Цвет фона */
+      transition: 1s; /* Плавный переход для анимации */
+    }
+
+    /* Стили для блока .description */
+    .description a{
+      display:inline-block; /* Инлайн-блочный элемент */
+      padding: 10px 30px; /* Внутренние отступы */
+      margin-top:30px; /* Верхний внешний отступ */
+      text-decoration:none; /* Убираем подчеркивание у ссылки */
+      text-transform:uppercase; /* Преобразование текста в верхний регистр */
+      color:#fff; /* Цвет текста */
+      background-color: #f5dde1; /* Цвет фона */
+    }
+
+    /* Стили для блока .description */
+    .description {
+      box-sizing:border-box; /* Размеры элемента включают границы и внутренние отступы */
+      padding:40px; /* Внутренние отступы для .description */
+      transform: rotateY(180deg); /* Поворот блока на 180 градусов, чтобы скрыть его в начальном состоянии (без наведения курсора мыши) */
+    }
+
+    /* Анимация при наведении на карточку */
+    .card:hover .product {
+      transform: rotateY(180deg); /* Поворот блока .product на 180 градусов */
+    }
+
+    /* Анимация при наведении на карточку */
+    .card:hover .description {
+      transform: rotateY(360deg); /* Возвращение блока .description */
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Блок с изображением товара -->
+    <div class="product"><img src="https://res.cloudinary.com/dzddufhmi/image/upload/v1594066522/product_avt7fo.png"></div>
+    <!-- Блок с описанием товара -->
+    <div class="description">
+      <h2>Product Name</h2> <!-- Заголовок товара -->
+      <hr> <!-- Горизонтальная линия -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi autem, eaque nihil nesciunt facere culpa. Aperiam voluptates quo, asperiores nesciunt, unde ut culpa sed reprehenderit, magni adipisci, at explicabo nostrum.</p> <!-- Описание товара -->
+      <a href="#">buy</a> <!-- Ссылка для покупки -->
+    </div>
+  </div>
+</body>
+</html>
