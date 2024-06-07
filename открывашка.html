@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reveal Text on Hover</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  .container {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    perspective: 600px; /* Применение перспективы к контейнеру */
+  }
+  .block {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #8B008B;
+    transition: transform 2s;
+    transform-origin: center left;
+    
+  }
+  .block.right {
+    left: 50%;
+    transform-origin: center right;
+  }
+  .container:hover .block.left {
+    transform: rotateY(45deg); /* Поворот блока с применением перспективы */
+  }
+  .container:hover .block.right {
+    transform: rotateY(-45deg); /* Поворот блока с применением перспективы */
+  }
+  .text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    opacity: 0;
+    transition: opacity 2s;
+  }
+  .container:hover .text {
+    opacity: 1;
+  }
+
+
+  
+</style>
+</head>
+<!-- 
+perspective:
+Определяет расстояние от зрителя до плоскости трансформации.
+Чем меньше значение, тем сильнее эффект перспективы (элементы будут казаться более "глубокими").
+Чем больше значение, тем слабее эффект перспективы (элементы будут казаться более плоскими).
+Задается только для родительского элемента.
+-->
+<body>
+  <div class="container">
+    <div class="block left"></div>
+    <div class="block right"></div>
+    <div class="text">HELLO</div>
+  </div>
+</body>
+</html>
