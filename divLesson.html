@@ -3,95 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню с подменю</title>
+    <title>План урока по HTML с использованием тегов списка</title>
     <style>
-        /* Стили для меню */
-        nav {
-            background-color: #4CAF50;
-            overflow: hidden;
+        /* Стили для шапки */
+        #header {
+            background: #ccc; /* Серый фон */
+            height: 200px; /* Высота */
+            text-align: center; /* Выравнивание текста по центру */
+            line-height: 200px; /* Высота строки для вертикального центрирования */
+            font-size: 24px; /* Размер шрифта */
+            font-weight: bold; /* Жирный шрифт */
         }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
+        p{
+            font-size: 50px;
         }
-        nav ul li {
-            position: relative;
+        /* Стили для основного контента */
+        #content {
+            
+            width: 600px; /* Ширина */
+            float: left; /* Обтекание по левому краю */
+            background: #eee; /* Светло-серый фон */
+            height: 300px;
         }
-        nav ul li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
+
+        /* Стили для боковой колонки */
+        #sidebar {
+            width: 360px; /* Ширина */
+            float: right; /* Обтекание по правому краю */
+            background: #ddd; /* Светло-серый фон */
+            height: 300px; /* Высота */
+            
         }
-        nav ul li a:hover {
-            background-color: #45a049;
+
+        /* Основной контейнер */
+        #container {
+            border: 1px solid #000; /* Черная рамка */
+            background-color: #f86d6d; /* Светло-серый фон */
+            padding: 10px; /* Внутренний отступ */
+            margin-top: 20px; /* Отступ сверху */
         }
-        /* Стили для подменю */
-        .submenu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #4CAF50;
-            min-width: 200px;
-            z-index: 1;
-        }
-        .submenu li {
-            position: relative;
-        }
-        .submenu ul {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 100%;
-        }
-        /* Показываем подменю при наведении */
-        nav ul li:hover > .submenu,
-        .submenu li:hover > ul {
-            display: block;
-        }
-        /* Подсветка пунктов меню */
-        nav ul li:hover > a,
-        .submenu li:hover > a {
-            background-color: #45a049;
-        }
-        /* Подсветка текущего пункта меню при открытом подменю */
-        .submenu li:hover > a {
-            background-color: #5a7bb7;
+
+        /* Стили для подвала */
+        #footer {
+            clear: both; /* Очистка обтекания */
+            height: 40px; /* Высота */
+            background: #aaa; /* Серый фон */
+            text-align: center; /* Выравнивание текста по центру */
+            line-height: 40px; /* Высота строки для вертикального центрирования */
         }
     </style>
 </head>
+
+<!-- 
+<div> - блоковый элемент, используется для группировки других элементов и создания макета страницы.
+
+Пример: <div id="container">...</div>.
+Стили: border, background-color, padding, margin-top.
+<ul>(unordered list) - ненумерованный список, используется для отображения элементов списка с маркерами.
+<ol>(ordered list) - нумерованный список
+
+Пример: <ul>
+            <li>Элемент 1</li>
+            <li>Элемент 2</li> 
+        </ul>.
+
+Стили: list-style-type, padding-left.
+
+<li>(list item) - элемент списка, используется внутри <ul> или <ol>.
+
+Пример: <li>Элемент списка</li>.
+
+Стили:
+border - устанавливает границу вокруг элемента.
+background-color - задает цвет фона элемента.
+padding - внутренний отступ внутри элемента.
+padding-(top/left/right/bottom) - отступ сверху/слева/справа/снизу в пикселях(px).
+margin - Отступ, который добавляет пространство вне элемента, отодвигая его от других элементов.
+margin-(top/left/right/bottom) - отступ сверху/слева/справа/снизу в пикселях(px).
+Если указано четыре значения (например, margin: 5px 10px 15px 20px;), они применяются по часовой стрелке: сверху, справа, снизу и слева соответственно.
+float - управляет обтеканием элемента (left, right).
+clear - отменяет обтекание (используется в подвале для очистки обтекания).
+-->
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Categories</a>
-                <ul class="submenu">
-                    <li><a href="#">Category 1</a>
-                        <ul class="submenu">
-                            <li><a href="#">Subcategory 1</a></li>
-                            <li><a href="#">Subcategory 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Category 2</a>
-                        <ul class="submenu">
-                            <li><a href="#">Subcategory 3</a></li>
-                            <li><a href="#">Subcategory 4</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contacts</a></li>
-        </ul>
-    </nav>
-    
-    <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac augue quis ante blandit blandit eu et massa. Integer libero dui, pellentesque id laoreet eu, dignissim non ex. Donec a purus non augue rutrum semper et quis justo. Etiam ultrices ante at elit porttitor malesuada. Morbi feugiat tempus massa non venenatis. Suspendisse id leo eros. Fusce sodales elementum purus, eu rutrum arcu blandit eu. Ut convallis, ex et ullamcorper facilisis, arcu risus bibendum ipsum, vel scelerisque eros metus ac odio. Maecenas euismod velit odio, a mattis turpis dictum vel. Maecenas nibh elit, ullamcorper eget tortor a, suscipit mattis mauris. Aliquam nec fringilla lectus, eu luctus quam. Aliquam finibus, risus eget congue iaculis, elit sapien convallis risus, eu tincidunt leo dui quis lacus. Fusce a auctor odio, at tristique quam.</p>
+    <div style="width: 960px; margin: 0 auto;">
+        <div id="header">Шапка</div>
+        <div id="content">Контент
+            <p>Первый абзац текста.</p>
+            <p>Второй абзац текста.</p>
+            <div id="container">
+                <h2>Заголовок</h2>
+                <p>Это первый абзац внутри блока div.</p>
+                <p>Это второй абзац внутри блока div.</p>
+            </div>
+        </div>
+        <div id="sidebar">Боковая колонка
+            <ul>Список:
+                <li>Вложенный список
+                    <ul style="list-style-type: none"> <!-- none - маркер пустоты -->
+                        <li>Элемент 1</li>
+                        <li>Элемент 2</li>
+                        <li>Элемент 3</li>
+                    </ul>
+                </li>
+                <li>Вложенный список
+                    <ul style="list-style-type:decimal"> <!-- можно сделать нумерованным ненумерованный список-->
+                        <li>Элемент 1</li>
+                        <li>Элемент 2</li>
+                        <li>Элемент 3</li>
+                    </ul>
+                </li>
+                <li>Вложенный список
+                    <ul>
+                        <li>Элемент 1</li>
+                        <li>Элемент 2</li>
+                        <li>Элемент 3</li>
+                    </ul>
+                </li>
+            </ul>        
+        </div>
+        <div id="footer">Подвал</div>
     </div>
 </body>
 </html>

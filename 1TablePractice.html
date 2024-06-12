@@ -22,32 +22,46 @@
             border: 1px solid #ddd; /* Границы ячеек */
         }
         /* Стили для заголовков таблицы */
-        th {
+        th:nth-child(1) {
+            background-color: #4d23e7; /* Цвет фона */
+            color: white; /* Цвет текста */
+        }
+        th:nth-child(2) {
+            background-color: #421cce; /* Цвет фона */
+            color: white; /* Цвет текста */
+        }
+        th:nth-child(3) {
+            background-color: #3d1abe; /* Цвет фона */
+            color: white; /* Цвет текста */
+        }
+        th:nth-child(4) {
+            background-color: #3817ad; /* Цвет фона */
+            color: white; /* Цвет текста */
+        }
+        th:nth-child(5) {
             background-color: #3315a0; /* Цвет фона */
             color: white; /* Цвет текста */
         }
         /* Чередующиеся цвета фона для четных и нечетных строк */
-        tr:nth-child(even) td {
-            background-color: #f9f9f9;
+        
+        /* Применение фонов для ячеек в четных и нечетных колонках */
+        
+        tbody tr td {
+            background-color: transparent;
         }
-        tr:nth-child(odd) td {
-            background-color: #ffffff;
+        tbody tr:nth-child(even) td:nth-child(even){
+            background-color: #fd2e2e;
         }
-        /* Цвет фона для первой колонки заголовков */
-        th:nth-child(1) {
-            background-color: #4c53af;
+        tbody tr:nth-child(odd) td:nth-child(odd) {
+            background-color: #fd2e2e;
         }
-        /* Цвет фона для второй колонки заголовков */
-        th:nth-child(2) {
-            background-color: #141a79;
+        tbody tr:nth-child(even) td:nth-child(odd)
+        {
+            background-color: #11ff11;
         }
-        /* Цвет фона для третьей колонки заголовков */
-        th:nth-child(3) {
-            background-color: #0c1261;
-        }
-        /* Цвет фона для первой ячейки в строках */
-        td:first-child {
-            background-color: #d0d8e8;
+        tbody tr:nth-child(odd) td:nth-child(even) 
+        {
+            background-color: #11ff11;
         }
         /* Цвет фона для последней строки таблицы */
         tr:last-child td {
@@ -66,10 +80,16 @@
             background-color: #454ba0;
         }
     </style>
-    
 </head>
 <body>
     <table>
+        <colgroup>
+            <col class="col-odd">
+            <col class="col-even">
+            <col class="col-odd">
+            <col class="col-even">
+            <col class="col-odd">
+        </colgroup>
         <thead>
             <tr>
                 <th>Choose your plan</th>
@@ -109,7 +129,7 @@
                 <td>Unlimited</td>
             </tr>
             <tr>
-                <td>25h support</td>
+                <td>24h support</td>
                 <td>No</td>
                 <td>Yes</td>
                 <td>Yes</td>
