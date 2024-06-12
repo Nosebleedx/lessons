@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планы подписки</title>
+    <style>
+        /* Устанавливаем шрифт для всего документа */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* Определяем стили для таблицы */
+        table {
+            width: 100%; /* Ширина таблицы равна 100% ширины контейнера */
+            border-collapse: collapse; /* Сливаем границы ячеек */
+            margin: 20px 0; /* Отступы сверху и снизу таблицы */
+        }
+        /* Определяем стили для заголовков и ячеек таблицы */
+        th, td {
+            padding: 15px; /* Внутренний отступ ячеек */
+            text-align: center; /* Выравнивание текста по центру */
+            border: 1px solid #ddd; /* Границы ячеек */
+        }
+        /* Стили для заголовков таблицы */
+        th {
+            background-color: #3315a0; /* Цвет фона */
+            color: white; /* Цвет текста */
+        }
+        /* Чередующиеся цвета фона для четных и нечетных строк */
+        tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(odd) td {
+            background-color: #ffffff;
+        }
+        /* Цвет фона для первой колонки заголовков */
+        th:nth-child(1) {
+            background-color: #4c53af;
+        }
+        /* Цвет фона для второй колонки заголовков */
+        th:nth-child(2) {
+            background-color: #141a79;
+        }
+        /* Цвет фона для третьей колонки заголовков */
+        th:nth-child(3) {
+            background-color: #0c1261;
+        }
+        /* Цвет фона для первой ячейки в строках */
+        td:first-child {
+            background-color: #d0d8e8;
+        }
+        /* Цвет фона для последней строки таблицы */
+        tr:last-child td {
+            background-color: #f4f4f4;
+        }
+        /* Стили для кнопок */
+        .start-btn {
+            background-color: #4c53af; /* Цвет фона кнопок */
+            color: white; /* Цвет текста кнопок */
+            padding: 10px 20px; /* Внутренние отступы кнопок */
+            border: none; /* Убираем границы кнопок */
+            cursor: pointer; /* Устанавливаем указатель мыши при наведении на кнопки */
+        }
+        /* Изменение цвета фона кнопок при наведении */
+        .start-btn:hover {
+            background-color: #454ba0;
+        }
+    </style>
+    
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Choose your plan</th>
+                <th>starter<br>$10<br>per month</th>
+                <th>econom<br>$30<br>per month</th>
+                <th>standard<br>$59<br>per month</th>
+                <th>professional<br>$99<br>per month</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Amount of space</td>
+                <td>20GB</td>
+                <td>40GB</td>
+                <td>110GB</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>Bandwidth per month</td>
+                <td>120GB</td>
+                <td>240GB</td>
+                <td>610GB</td>
+                <td>1300GB</td>
+            </tr>
+            <tr>
+                <td>Email accounts</td>
+                <td>1</td>
+                <td>15</td>
+                <td>60</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>MySQL databases</td>
+                <td>1</td>
+                <td>15</td>
+                <td>60</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>25h support</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Support tickets per month</td>
+                <td>2</td>
+                <td>6</td>
+                <td>14</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="start-btn">START</button></td>
+                <td><button class="start-btn">START</button></td>
+                <td><button class="start-btn">START</button></td>
+                <td><button class="start-btn">START</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
