@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Shakespeare</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow: hidden; /* Clearfix hack */
+        }
+        .main-content {
+            width: 70%;
+            float: left;
+        }
+        .sidebar {
+            width: 28%;
+            float: right;
+            max-width: 300px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        .sidebar h3 {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+        .sidebar p, .main-content p {
+            margin-bottom: 1em;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 0.5em;
+        }
+        .similar-authors {
+            margin-top: 20px;
+            overflow: hidden; /* Clearfix hack */
+        }
+        .similar-authors div {
+            float: left;
+            text-align: center;
+            margin: 0 10px;
+            width: calc(16.666% - 20px); /* 6 items per row with margins */
+        }
+        .similar-authors img {
+            max-width: 100px;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        .similar-authors div p {
+            margin: 5px 0 0;
+        }
+        nav {
+            background-color: #800000;
+            color: white;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        nav ul li {
+            float: left;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Writers</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">The authors</a></li>
+            <li><a href="#">Readers</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <h1>William Shakespeare</h1>
+            <p><i>From Wikipedia, the free encyclopedia</i></p>
+            <p>William Shakespeare (bapt. 26 April 1564 – 23 April 1616) was an English poet, playwright and actor, widely regarded as the greatest writer in the English language and the world's greatest dramatist...</p>
+            <!-- Add more paragraphs here as needed -->
+        </div>
+        <div class="sidebar">
+            <h3>Born</h3>
+            <p>26 April 1564</p>
+            <h3>Died</h3>
+            <p>23 April 1616</p>
+            <h3>Spouse</h3>
+            <p>Anne Hathaway (m. 1582)</p>
+            <h3>Children</h3>
+            <p>Susanna Hall<br>Hamnet Shakespeare<br>Judith Quiney</p>
+            <h3>Parents</h3>
+            <p>John Shakespeare (father)<br>Mary Arden (mother)</p>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Similar authors:</h2>
+        <div class="similar-authors">
+            <div>
+                <img src="anne_hathaway.jpg" alt="Anne Hathaway">
+                <p>Anne Hathaway</p>
+            </div>
+            <div>
+                <img src="charles_dickens.jpg" alt="Charles Dickens">
+                <p>Charles Dickens</p>
+            </div>
+            <div>
+                <img src="oscar_wilde.jpg" alt="Oscar Wilde">
+                <p>Oscar Wilde</p>
+            </div>
+            <div>
+                <img src="miguel_de_cervantes.jpg" alt="Miguel de Cervantes">
+                <p>Miguel de Cervantes</p>
+            </div>
+            <div>
+                <img src="edgar_allan_poe.jpg" alt="Edgar Allan Poe">
+                <p>Edgar Allan Poe</p>
+            </div>
+            <div>
+                <img src="william_wordsworth.jpg" alt="William Wordsworth">
+                <p>William Wordsworth</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

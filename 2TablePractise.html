@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Меню с подменю</title>
     <style>
+        body{
+            padding: 0;
+            
+        }
         /* Стили для меню */
         nav {
             background-color: #4CAF50;
             overflow:visible;
+            padding: 0;
+            margin: 0;
         }
         nav ul {
             list-style-type: none;
@@ -18,17 +24,24 @@
             justify-content: space-around;
         }
         nav ul li {
+
             position: relative;
         }
+        
         nav ul li a {
             display: block;
             color: white;
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            
         }
         nav ul li a:hover {
             background-color: #45a049;
+        }
+        li::before{
+            left: 0;
+
         }
         /* Стили для подменю */
         .submenu {
@@ -38,7 +51,6 @@
             left: 0;
             background-color: #4CAF50;
             min-width: 200px;
-            z-index: 1;
         }
         .submenu li {
             position: relative;
