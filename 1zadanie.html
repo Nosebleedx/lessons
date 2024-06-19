@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица с фиксированным заголовком и первым столбцом</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+            background-color: white; /* Фоновый цвет для ячеек */
+        }
+        thead th {
+            background-color: #f4f4f4;
+            position: sticky;
+            top: 0; /* Фиксирует заголовок таблицы */
+            z-index: 2; /* Обеспечивает перекрытие над другими элементами */
+        }
+        tbody td:first-child,
+        thead th:first-child {
+            position: sticky;
+            left: 0; /* Фиксирует первый столбец */
+            background-color: #f4f4f4;
+            z-index: 1; /* Обеспечивает перекрытие над другими элементами */
+        }
+        thead th:first-child {
+            z-index: 3;/* Обеспечивает перекрытие над всеми элементами */
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9; /* Чередование строк */
+        }
+        tbody tr:nth-child(even) {
+            background-color: #ffffff; /* Чередование строк */
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                    <th>Header 4</th>
+                    <th>Header 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Line 1</td><td>23</td><td>123</td><td>12</td><td>1</td><td>76</td></tr>
+                <tr><td>Line 2</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td></tr>
+                <tr><td>Line 3</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td></tr>
+                <tr><td>Line 4</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td></tr>
+                <tr><td>Line 5</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td></tr>
+                <tr><td>Line 6</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td></tr>
+                <tr><td>Line 7</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td></tr>
+                <tr><td>Line 8</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
