@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Responsive Design Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #4CAF50;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Шпаргалка по CSS для адаптивного дизайна</h1>
+    
+    <h2>Медиа-запросы</h2>
+    <p>Используются для применения различных стилей в зависимости от характеристик устройства (например, ширина экрана).</p>
+    <pre><code>@media (min-width: 600px) and (max-width: 800px) {
+    /* Стили для экранов от 600px до 800px */
+}</code></pre>
+    
+    <h2>Flexbox</h2>
+    <h3><code>display: flex</code></h3>
+    <p>Определяет элемент как flex-контейнер, внутри которого дочерние элементы автоматически становятся flex-элементами.</p>
+    <pre><code>.container {
+    display: flex;
+}</code></pre>
+    
+    <h3><code>flex-direction</code></h3>
+    <p>Устанавливает направление главной оси (горизонтально или вертикально).</p>
+    <pre><code>.container {
+    flex-direction: row; /* Элементы располагаются в строку */
+    flex-direction: column; /* Элементы располагаются в колонку */
+}</code></pre>
+    
+    <h3><code>flex-wrap</code></h3>
+    <p>Определяет, должны ли элементы переноситься на новую строку или колонку, если они не умещаются.</p>
+    <pre><code>.container {
+    flex-wrap: nowrap; /* Все элементы в одной линии */
+    flex-wrap: wrap; /* Элементы переносятся на новую линию */
+}</code></pre>
+    
+    <h3><code>justify-content</code></h3>
+    <p>Выравнивание элементов вдоль главной оси.</p>
+    <pre><code>.container {
+    justify-content: flex-start; /* По началу контейнера */
+    justify-content: center; /* По центру */
+    justify-content: space-between; /* Равномерно с пространством между элементами */
+}</code></pre>
+    
+    <h3><code>align-items</code></h3>
+    <p>Выравнивание элементов вдоль поперечной оси.</p>
+    <pre><code>.container {
+    align-items: flex-start; /* По началу поперечной оси */
+    align-items: center; /* По центру поперечной оси */
+    align-items: stretch; /* Растягивание элементов на всю высоту контейнера */
+}</code></pre>
+    
+    <h3><code>align-content</code></h3>
+    <p>Выравнивание линий элементов вдоль поперечной оси, если элементы переносятся.</p>
+    <pre><code>.container {
+    align-content: flex-start; /* Линии выравниваются по началу поперечной оси */
+    align-content: center; /* Линии выравниваются по центру поперечной оси */
+    align-content: space-between; /* Равномерное распределение линий с пространством между ними */
+}</code></pre>
+    
+    <h3><code>flex</code></h3>
+    <p>Гибкая величина для элементов flex-контейнера.</p>
+    <pre><code>.element {
+    flex: 1; /* Элемент будет растягиваться, занимая доступное пространство */
+}</code></pre>
+    
+    <h3><code>order</code></h3>
+    <p>Определяет порядок отображения элементов внутри flex-контейнера.</p>
+    <pre><code>.element1 {
+    order: 1; /* Этот элемент будет отображен первым */
+}
+.element2 {
+    order: 2; /* Этот элемент будет отображен вторым */
+}</code></pre>
+    
+    
+    
+    
+    
+    <h2>Размеры</h2>
+    <h3><code>width</code> и <code>height</code></h3>
+    <p>Устанавливают ширину и высоту элементов.</p>
+    <pre><code>.element {
+    width: 100%; /* Ширина элемента 100% от родительского контейнера */
+    height: auto; /* Высота элемента авто подстраивается */
+}</code></pre>
+    
+    <h3><code>max-width</code> и <code>min-width</code></h3>
+    <p>Устанавливают максимальную и минимальную ширину элементов.</p>
+    <pre><code>.element {
+    max-width: 600px; /* Максимальная ширина элемента 600px */
+    min-width: 300px; /* Минимальная ширина элемента 300px */
+}</code></pre>
+    
+    <h3><code>max-height</code> и <code>min-height</code></h3>
+    <p>Устанавливают максимальную и минимальную высоту элементов.</p>
+    <pre><code>.element {
+    max-height: 600px; /* Максимальная высота элемента 600px */
+    min-height: 300px; /* Минимальная высота элемента 300px */
+}</code></pre>
+    
+    <h2>Типы отображения</h2>
+    <h3><code>display</code></h3>
+    <p>Определяет тип отображения элемента.</p>
+    <pre><code>.element {
+    display: block; /* Блочный элемент */
+    display: inline; /* Встроенный элемент */
+    display: flex; /* Flex-контейнер */
+}</code></pre>
+</body>
+</html>
