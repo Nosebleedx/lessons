@@ -5,81 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Upload Progress</title>
     <style>
+        /* Общие стили для всего документа */
         body {
-    font-family: Arial, sans-serif;
-}
+            font-family: Arial, sans-serif;
+        }
 
-.container {
-    width: 80%;
-    max-width: 800px;
-    margin: auto;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        /* Стили для основного контейнера, который ограничивает ширину и центрирует содержимое */
+        .container {
+            width: 80%; /* Ширина контейнера 80% от ширины экрана, но не более 800px */
+            max-width: 800px; /* Максимальная ширина контейнера */
+            margin: auto; /* Центрирование контейнера на странице */
+            border: 1px solid #ccc; /* Рамка вокруг контейнера */
+            padding: 20px; /* Внутренний отступ контейнера */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень контейнера */
+        }
 
-.image {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        /* Стили для блока с изображением */
+        .image {
+            text-align: center; /* Выравнивание содержимого по центру */
+            margin-bottom: 20px; /* Отступ снизу */
+        }
 
-.image img {
-    max-width: 100px;
-}
+        /* Стили для изображения в блоке .image */
+        .image img {
+            max-width: 100px; /* Максимальная ширина изображения */
+        }
 
-.info {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        /* Стили для блока с информацией о загрузке */
+        .info {
+            text-align: center; /* Выравнивание содержимого по центру */
+            margin-bottom: 20px; /* Отступ снизу */
+        }
 
-.info p, .info h3 {
-    margin: 10px 0;
-}
+        /* Стили для параграфов и заголовка в блоке .info */
+        .info p, .info h3 {
+            margin: 10px 0; /* Внешние отступы для параграфов и заголовка */
+        }
 
-.button {
-    text-align: center;
-}
+        /* Стили для кнопки в блоке .button */
+        .button {
+            text-align: center; /* Выравнивание кнопки по центру */
+        }
 
-.button button {
-    padding: 10px 20px;
-    font-size: 16px;
-}
+        /* Стили для кнопки */
+        .button button {
+            padding: 10px 20px; /* Внутренние отступы кнопки */
+            font-size: 16px; /* Размер шрифта кнопки */
+        }
 
-/* Медиа-запрос для экранов шире 600px */
-@media (min-width: 600px) {
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+        /* Медиа-запрос для экранов шире 600px */
+        @media (min-width: 600px) {
+            .container {
+                display: flex; /* Использование flexbox для выравнивания дочерних элементов */
+                align-items: center; /* Выравнивание элементов по центру по вертикали */
+                justify-content: space-between; /* Равномерное распределение пространства между элементами */
+            }
 
-    .image, .info, .button {
-        width: 30%;
-        text-align: left;
-    }
+            /* Изменения стилей блоков в режиме flexbox */
+            .image, .info, .button {
+                width: 30%; /* Ширина каждого блока */
+                text-align: left; /* Выравнивание текста по левому краю */
+            }
 
-    .image {
-        margin-bottom: 0;
-    }
+            /* Дополнительные стили для блока .image в режиме flexbox */
+            .image {
+                margin-bottom: 0; /* Удаление отступа снизу */
+            }
 
-    .button {
-        text-align: right;
-    }
-}
-
+            /* Дополнительные стили для блока .button в режиме flexbox */
+            .button {
+                text-align: right; /* Выравнивание текста и кнопки по правому краю */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Блок с изображением -->
         <div class="image">
             <img src="loading-image.jpg" alt="Loading">
         </div>
+        <!-- Блок с информацией о загрузке -->
         <div class="info">
             <p>UPLOADING 40%</p>
             <p>About 23 minutes remaining</p>
             <h3>Title of video</h3>
             <p>Your video is still uploading. Please stay on this page until it’s done.</p>
         </div>
+        <!-- Блок с кнопкой "DONE" -->
         <div class="button">
             <button>DONE</button>
         </div>
