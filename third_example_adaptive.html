@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика</title>
+    <style>
+        /* Base styles for the entire document */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container to hold both the sidebar and content */
+.container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents items from wrapping */
+    min-height: 100vh; /* Ensures the container takes the full height of the viewport */
+}
+
+/* Styles for the sidebar */
+.sidebar {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    width: 200px; /* Fixed width for sidebar */
+    min-height: 100vh; /* Ensures sidebar takes full height */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+/* Styles for the content area */
+.content {
+    flex: 1; /* Takes remaining space */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between charts */
+}
+
+.chart {
+    flex: 1;
+    min-width: 300px; /* Minimum width for each chart */
+}
+
+.recent-activity table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.recent-activity th, .recent-activity td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.recent-activity th {
+    background-color: #f2f2f2;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Stacks items vertically */
+    }
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+        min-height: auto; /* Resets minimum height */
+    }
+    .content {
+        padding: 10px; /* Reduces padding for smaller screens */
+    }
+    .charts {
+        flex-direction: column; /* Stacks charts vertically */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li>Главная</li>
+                <li>Отчеты</li>
+                <li>Аналитика</li>
+                <li>Настройки</li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Dashboard - May 25, 2019</h2>
+            <div class="charts">
+                <div class="chart">
+                    <h3>Traffic</h3>
+                    <img src="chart1.png" alt="Traffic Chart">
+                </div>
+                <div class="chart">
+                    <h3>Sales</h3>
+                    <img src="chart2.png" alt="Sales Chart">
+                </div>
+            </div>
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Activity</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>May 24, 2019</td>
+                        <td>Logged in</td>
+                        <td>Success</td>
+                    </tr>
+                    <!-- Additional rows as needed -->
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

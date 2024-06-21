@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статья с боковым меню</title>
+    <style>
+        /* Base styles for the entire document */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container to hold both the article and sidebar */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows flex items to wrap onto multiple lines */
+    margin: 20px;
+}
+
+/* Styles for the article section */
+.article {
+    flex: 1; /* Take up remaining space */
+    min-width: 300px; /* Minimum width of the article */
+    margin-right: 20px;
+}
+
+/* Styles for the sidebar */
+.sidebar {
+    flex: 0 0 250px; /* Fixed width sidebar */
+    min-width: 200px; /* Minimum width of the sidebar */
+}
+
+/* Styles for the menu within the sidebar */
+.menu {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+    }
+    .article {
+        margin-right: 0; /* Remove right margin for smaller screens */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="article">
+            <h1>Заголовок статьи</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui expedita accusamus velit ut optio id nisi est repellendus quas, quibusdam tempora impedit eius ratione beatae voluptates voluptas ab vel eum?</p>
+        </div>
+        <div class="sidebar">
+            <div class="menu">
+                <h2>Боковое меню</h2>
+                <ul>
+                    <li>Пункт 1</li>
+                    <li>Пункт 2</li>
+                    <li>Пункт 3</li>
+                </ul>
+            </div>
+            <div class="menu">
+                <h2>Боковое меню 2</h2>
+                <ul>
+                    <li>Пункт 1</li>
+                    <li>Пункт 2</li>
+                    <li>Пункт 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
