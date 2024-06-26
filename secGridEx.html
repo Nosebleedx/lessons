@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .message {
+            display: grid;
+            grid-template-columns: 100px auto 100px;
+            gap: 10px;
+            align-items: start;
+            margin-bottom: 15px;
+        }
+        .message.left .avatar {
+            grid-column: 1;
+        }
+        .message.left .content {
+            grid-column: 2;
+        }
+        .message.left .info {
+            grid-column: 1;
+            text-align: left;
+        }
+        .message.right .avatar {
+            grid-column: 3;
+        }
+        .message.right .content {
+            grid-column: 2;
+        }
+        .message.right .info {
+            grid-column: 3;
+            text-align: right;
+        }
+        .avatar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .content {
+            max-width: 100%;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .message.left .content {
+            background-color: #ffcccc;
+        }
+        .message.right .content {
+            text-align: right;
+            background-color: #cceeff;
+        }
+        .info {
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message left">
+            <div class="avatar">
+                <img src="котик.jpg" alt="Anie Smith">
+                <div class="info">Anie Smith • 4 hours ago</div>
+            </div>
+            <div class="content">
+                <p>Ut in enim scelerisque, pharetra velit id, maximus nunc</p>
+            </div>
+        </div>
+        <div class="message right">
+            <div class="content">
+                <p>Fusce auctor nibh at consequat efficitur</p>
+            </div>
+            <div class="avatar">
+                <img src="котик.jpg" alt="Jack Silverston">
+                <div class="info">Jack Silverston • 4 hours ago</div>
+            </div>
+        </div>
+        <div class="message left">
+            <div class="avatar">
+                <img src="котик.jpg" alt="Anie Smith">
+                <div class="info">Anie Smith • 4 hours ago</div>
+            </div>
+            <div class="content">
+                <p>Etiam lacinia velit id venenatis sodales</p>
+            </div>
+        </div>
+        <div class="message right">
+            <div class="content">
+                <p>Mauris ac mi quis ante dignissim tempus in non nulla</p>
+            </div>
+            <div class="avatar">
+                <img src="котик.jpg" alt="Jack Silverston">
+                <div class="info">Jack Silverston • 3 hours ago</div>
+            </div>
+        </div>
+        <div class="message left">
+            <div class="avatar">
+                <img src="котик.jpg" alt="Anie Smith">
+                <div class="info">Anie Smith • 3 hours ago</div>
+            </div>
+            <div class="content">
+                <p>Fusce quis ex fringilla, congue diam vel, sodales tortor</p>
+            </div>
+        </div>
+        <div class="message right">
+            <div class="content">
+                <p>Curabitur quis dolor eget elit pulvinar sollicitudin</p>
+            </div>
+            <div class="avatar">
+                <img src="котик.jpg" alt="Jack Silverston">
+                <div class="info">Jack Silverston • 3 hours ago</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
