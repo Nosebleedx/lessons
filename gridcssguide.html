@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout Properties</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .property {
+            margin-bottom: 15px;
+        }
+        .property h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .property p {
+            margin: 5px 0;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Grid Layout Properties</h1>
+
+        <div class="property">
+            <h2>grid-template-columns</h2>
+            <p>Определяет количество и размеры колонок.</p>
+            <p><code>grid-template-columns: 100px 200px 1fr;</code></p>
+        </div>
+
+        <div class="property">
+            <h2>grid-template-rows</h2>
+            <p>Определяет количество и размеры строк.</p>
+            <p><code>grid-template-rows: auto 100px 1fr;</code></p>
+        </div>
+
+        <div class="property">
+            <h2>grid-gap</h2>
+            <p>Устанавливает расстояние между колонками и строками.</p>
+            <p><code>grid-gap: 10px 15px;</code></p>
+        </div>
+
+        <div class="property">
+            <h2>grid-auto-rows</h2>
+            <p>Определяет высоту автоматически добавляемых строк. В данном примере устанавливает минимальную высоту строки в 100px, но позволяет ей расширяться, если это необходимо.</p>
+            <p><code>grid-auto-rows: minmax(100px, auto);</code></p>
+        </div>
+
+        <div class="property">
+            <h2>grid-template-areas</h2>
+            <p>Позволяет именовать области сетки и размещать элементы по именам.</p>
+            <p>
+                <code>
+                    grid-template-areas: <br>
+                    "header header header"<br>
+                    "sidebar content content"<br>
+                    "footer footer footer";
+                </code>
+            </p>
+        </div>
+
+        <div class="property">
+            <h2>grid-area</h2>
+            <p>Сокращённая запись для задания области сетки, которую занимает элемент.</p>
+            <p><code>grid-area: 1 / 2 / 4 / 5;</code></p>
+        </div>
+
+        <div class="property">
+            <h2>grid-row-start</h2>
+            <p>Указывает начальную строку для элемента.</p>
+            <p><code>grid-row-start: 2;</code></p>
+        </div>
+
+        <div class="property">
+            <h2>grid-column-start</h2>
+            <p>Указывает начальную колонку для элемента.</p>
+            <p><code>grid-column-start: 1;</code></p>
+        </div>
+
+        <div class="property">
+            <h2>grid-column</h2>
+            <p>Указывает начальную и конечную колонки для элемента.</p>
+            <p><code>grid-column: 1 / 3;</code></p>
+        </div>
+
+        <div class="property">
+            <h2>grid-row</h2>
+            <p>Указывает начальную и конечную строки для элемента.</p>
+            <p><code>grid-row: 1 / 3;</code></p>
+        </div>
+
+    </div>
+</body>
+</html>
