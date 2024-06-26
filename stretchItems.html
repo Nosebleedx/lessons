@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: #eee;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .stretch {
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item item1">Item 1</div>
+        <div class="item item2">Item 2</div>
+        <div class="item item3">Item 3</div>
+      </div>
+      
+</body>
+</html>
