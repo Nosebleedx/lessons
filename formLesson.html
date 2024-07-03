@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea{
+            resize: none; /* Запрещает изменение размера текстовой области */
+            max-height: 200px; /* Максимальная высота текстовой области */
+            max-width: 200px; /* Максимальная ширина текстовой области */
+        }
+        input, textarea{
+            outline: none; /* Убирает стандартное выделение при фокусе */
+            border: 1px solid #ddd; /* Устанавливает границу серого цвета */
+        }
+        input:focus, textarea:focus{
+            box-shadow: 0 0 4px rgba(255, 0, 0, 0.5); /* Добавляет красную тень вокруг поля при фокусе */
+            border: 1px solid rgb(255, 0, 0); /* Меняет цвет границы на красный при фокусе */
+        }
+        ::placeholder{
+            color: red; /* Меняет цвет плейсхолдера на красный */
+            opacity: 1; /* Устанавливает непрозрачность плейсхолдера на 100% */
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <!-- Текстовое поле с плейсхолдером -->
+        <input type="text" name="email" placeholder="Enter your email">
+        
+        <!-- Текстовое поле с предустановленным значением -->
+        <input type="text" name="email" value="Write your email">
+        
+        <!-- Радиокнопки для выбора пола -->
+        Male: <input type="radio" name="gender" value="Male">
+        Female: <input type="radio" name="gender" value="Female" checked>
+        
+        <!-- Поле для ввода пароля с плейсхолдером -->
+        <input type="password" placeholder="Password">
+        
+        <!-- Текстовая область с плейсхолдером и предустановленным текстом -->
+        <textarea name="message" placeholder="Write a message">asdasdasdasd</textarea>
+        
+        <!-- Выпадающий список с опциями -->
+        <select>
+            <option value="car1"> Ford </option>
+            <option value="car2"> Mercedes </option>
+            <option value="car3"> Opel </option>
+        </select>
+        
+        <!-- Кнопка для отправки формы -->
+        <button type="submit" name="submit">Submit</button>
+        
+        <!-- Альтернативная кнопка для отправки формы -->
+        <input type="submit" name="submit">
+    </form>
+</body>
+</html>
