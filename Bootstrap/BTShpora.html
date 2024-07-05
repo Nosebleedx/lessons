@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Cheat Sheet</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="mb-4">Bootstrap Cheat Sheet</h1>
+
+        <h2>Сетка (Grid)</h2>
+        <ul>
+            <li><code>.container</code> - Создает фиксированный контейнер с отступами по краям.</li>
+            <li><code>.container-fluid</code> - Создает контейнер на всю ширину экрана.</li>
+            <li><code>.row</code> - Создает строку для размещения колонок.</li>
+            <li><code>.col</code> - Колонка, которая автоматически подстраивается под ширину.</li>
+            <li><code>.col-{size}-{number}</code> - Определяет ширину колонки (например, <code>.col-md-4</code> для средней ширины 4).</li>
+            <li><code>.offset-{size}-{number}</code> - Добавляет отступы слева от колонки (например, <code>.offset-md-4</code>).</li>
+        </ul>
+
+        <h2>Кнопки (Buttons)</h2>
+        <ul>
+            <li><code>.btn</code> - Основной класс кнопки.</li>
+            <li><code>.btn-primary</code> - Синяя кнопка (основная).</li>
+            <li><code>.btn-secondary</code> - Серая кнопка (второстепенная).</li>
+            <li><code>.btn-success</code> - Зеленая кнопка (успешная).</li>
+            <li><code>.btn-danger</code> - Красная кнопка (опасная).</li>
+            <li><code>.btn-warning</code> - Желтая кнопка (предупреждение).</li>
+            <li><code>.btn-info</code> - Голубая кнопка (информация).</li>
+            <li><code>.btn-light</code> - Светлая кнопка.</li>
+            <li><code>.btn-dark</code> - Темная кнопка.</li>
+            <li><code>.btn-link</code> - Кнопка-ссылка.</li>
+            <li><code>.btn-lg</code> - Большая кнопка.</li>
+            <li><code>.btn-sm</code> - Маленькая кнопка.</li>
+            <li><code>.btn-block</code> - Кнопка на всю ширину контейнера.</li>
+        </ul>
+
+        <h2>Формы (Forms)</h2>
+        <ul>
+            <li><code>.form-control</code> - Основной класс для полей ввода.</li>
+            <li><code>.form-group</code> - Контейнер для группировки элементов формы с отступами.</li>
+            <li><code>.form-check</code> - Контейнер для чекбоксов и радиокнопок.</li>
+            <li><code>.form-check-input</code> - Класс для чекбоксов и радиокнопок.</li>
+            <li><code>.form-check-label</code> - Класс для меток чекбоксов и радиокнопок.</li>
+            <li><code>.form-inline</code> - Размещает элементы формы в одну линию.</li>
+            <li><code>.input-group</code> - Контейнер для объединения полей ввода с дополнительными элементами (например, кнопками или текстом).</li>
+            <li><code>.input-group-prepend</code> - Контейнер для элементов, предшествующих полю ввода.</li>
+            <li><code>.input-group-append</code> - Контейнер для элементов, следующих за полем ввода.</li>
+            <li><code>.input-group-text</code> - Класс для добавления текста или элементов внутри <code>.input-group</code>.</li>
+        </ul>
+
+        <h2>Карточки (Cards)</h2>
+        <ul>
+            <li><code>.card</code> - Основной контейнер для карточки.</li>
+            <li><code>.card-body</code> - Контейнер для основного содержимого карточки.</li>
+            <li><code>.card-title</code> - Класс для заголовка карточки.</li>
+            <li><code>.card-text</code> - Класс для текста внутри карточки.</li>
+            <li><code>.card-img-top</code> - Класс для изображения в верхней части карточки.</li>
+            <li><code>.card-footer</code> - Класс для нижней части карточки.</li>
+        </ul>
+
+        <h2>Навигационная панель (Navbar)</h2>
+        <ul>
+            <li><code>.navbar</code> - Основной класс для навигационной панели.</li>
+            <li><code>.navbar-expand-lg</code> - Расширяет панель на больших экранах.</li>
+            <li><code>.navbar-light</code> - Светлая тема навигационной панели.</li>
+            <li><code>.navbar-dark</code> - Темная тема навигационной панели.</li>
+            <li><code>.navbar-brand</code> - Класс для логотипа или названия сайта.</li>
+            <li><code>.navbar-toggler</code> - Кнопка для сворачивания навигационной панели на маленьких экранах.</li>
+            <li><code>.navbar-collapse</code> - Контейнер для элементов, которые сворачиваются.</li>
+            <li><code>.nav-item</code> - Класс для элемента навигации.</li>
+            <li><code>.nav-link</code> - Класс для ссылки в элементе навигации.</li>
+        </ul>
+
+        <h2>Модальные окна (Modals)</h2>
+        <ul>
+            <li><code>.modal</code> - Основной класс для модального окна.</li>
+            <li><code>.modal-dialog</code> - Контейнер для содержимого модального окна.</li>
+            <li><code>.modal-content</code> - Контейнер для содержимого модального окна.</li>
+            <li><code>.modal-header</code> - Класс для заголовка модального окна.</li>
+            <li><code>.modal-body</code> - Класс для содержимого модального окна.</li>
+            <li><code>.modal-footer</code> - Класс для нижней части модального окна.</li>
+            <li><code>.modal-title</code> - Класс для заголовка модального окна.</li>
+            <li><code>.close</code> - Класс для кнопки закрытия модального окна.</li>
+        </ul>
+
+        <h2>Утилиты (Utilities)</h2>
+        <ul>
+            <li><code>.text-center</code> - Выравнивание текста по центру.</li>
+            <li><code>.text-right</code> - Выравнивание текста по правому краю.</li>
+            <li><code>.text-left</code> - Выравнивание текста по левому краю.</li>
+            <li><code>.text-muted</code> - Приглушенный цвет текста.</li>
+            <li><code>.bg-primary</code> - Синий фон.</li>
+            <li><code>.bg-secondary</code> - Серый фон.</li>
+            <li><code>.bg-success</code> - Зеленый фон.</li>
+            <li><code>.bg-danger</code> - Красный фон.</li>
+            <li><code>.bg-warning</code> - Желтый фон.</li>
+            <li><code>.bg-info</code> - Голубой фон.</li>
+            <li><code>.bg-light</code> - Светлый фон.</li>
+            <li><code>.bg-dark</code> - Темный фон.</li>
+            <li><code>.p-1</code> - Отступы (padding) размером 0.25rem.</li>
+            <li><code>.p-2</code> - Отступы (padding) размером 0.5rem.</li>
+            <li><code>.p-3</code> - Отступы (padding) размером 1rem.</li>
+            <li><code>.m-1</code> - Поля (margin) размером 0.25rem.</li>
+            <li><code>.m-2</code> - Поля (margin) размером 0.5rem.</li>
+            <li><code>.m-3</code> - Поля (margin) размером 1rem.</li>
+        </ul>
+    </div>
+
+    <!-- Подключение Bootstrap JS и Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

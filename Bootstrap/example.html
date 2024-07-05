@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебная страничка Bootstrap</title>
+    <!-- Подключение Bootstrap CSS через CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Логотип и название -->
+        <a class="navbar-brand" href="#">Учебная страничка</a>
+        <!-- Кнопка для мобильных устройств -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Навигационные ссылки -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Главная <span class="sr-only">(текущая)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Функции</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Цены</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основное содержимое -->
+    <div class="container mt-4">
+        <!-- Сетка из трех колонок -->
+        <div class="row">
+            <!-- Первая колонка -->
+            <div class="col-md-4">
+                <!-- Карточка -->
+                <div class="card">
+                    <!-- Изображение в карточке -->
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                    <!-- Тело карточки -->
+                    <div class="card-body">
+                        <h5 class="card-title">Карточка 1</h5>
+                        <p class="card-text">Некоторый текст для описания содержимого карточки.</p>
+                        <!-- Кнопка -->
+                        <a href="#" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Вторая колонка -->
+            <div class="col-md-4">
+                <!-- Карточка -->
+                <div class="card">
+                    <!-- Изображение в карточке -->
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                    <!-- Тело карточки -->
+                    <div class="card-body">
+                        <h5 class="card-title">Карточка 2</h5>
+                        <p class="card-text">Некоторый текст для описания содержимого карточки.</p>
+                        <!-- Кнопка -->
+                        <a href="#" class="btn btn-secondary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Третья колонка -->
+            <div class="col-md-4">
+                <!-- Карточка -->
+                <div class="card">
+                    <!-- Изображение в карточке -->
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                    <!-- Тело карточки -->
+                    <div class="card-body">
+                        <h5 class="card-title">Карточка 3</h5>
+                        <p class="card-text">Некоторый текст для описания содержимого карточки.</p>
+                        <!-- Кнопка -->
+                        <a href="#" class="btn btn-success">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма -->
+        <div class="mt-4">
+            <h3>Форма обратной связи</h3>
+            <form>
+                <!-- Поле для ввода email -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите email">
+                    <small id="emailHelp" class="form-text text-muted">Мы никогда не поделимся вашим email с кем-либо еще.</small>
+                </div>
+                <!-- Поле для ввода пароля -->
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Пароль</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+                </div>
+                <!-- Чекбокс -->
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Запомнить меня</label>
+                </div>
+                <!-- Кнопка отправки формы -->
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключение Bootstrap JS и Popper.js через CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
